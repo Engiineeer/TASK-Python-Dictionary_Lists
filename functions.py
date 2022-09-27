@@ -1,3 +1,4 @@
+from operator import not_
 from books import books
 
 #print(books[0])
@@ -55,7 +56,11 @@ print(get_book_property("title", books[0]))
 
 
 def calculate_not_available_books(books):
-    ...
+    not_available=[]
+    for book in books:
+        if book["available"] == False:
+             not_available.append(book)
+    return not_available
 
 
 print(calculate_not_available_books(books))
