@@ -20,9 +20,7 @@ def get_book_by_id(book_id, books):
             return book
 
 
-
 print(get_book_by_id(38, books))
-
 
 # add_summary_to_book(summary, book)
 # receives a book dictionary
@@ -33,9 +31,7 @@ def add_summary_to_book(summary, book):
     book["summary"] = summary
     return book
 
-
 print(add_summary_to_book("this is a good book about", books[0]))
-
 
 # CHALLENGE 1
 # get_book_property(property, book)
@@ -45,7 +41,7 @@ print(add_summary_to_book("this is a good book about", books[0]))
 
 
 def get_book_property(property, book):
-    ...
+    return book[property]
 
 
 print(get_book_property("color", books[0]))
