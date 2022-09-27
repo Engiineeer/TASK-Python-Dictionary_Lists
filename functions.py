@@ -64,14 +64,20 @@ def calculate_not_available_books(books):
 
 
 print(calculate_not_available_books(books))
-
+print("\n")
 # CHALLENGE 3
 # get_book_by_author_name(author_name, books)
 # receives a author name (string)
 # recieves a list of book dictionaries
 # returns the book dictionary that contains an author with the author name provided
 def get_book_by_author_name(author_name, books):
-    ...
+    by_auther=[]
+    for book in books:
+        for author in book["authors"]:
+            if author["name"]  == author_name:
+             by_auther.append(book) 
+        
+    return by_auther
 
 
 print(get_book_by_author_name("Neil Gaiman", books))
